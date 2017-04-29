@@ -110,3 +110,4 @@ UpgradeLog*.XML
 # Added by me
 *.sln.DotSettings
 temp
+/.vs/config/applicationhost.config

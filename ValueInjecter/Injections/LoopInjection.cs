@@ -31,12 +31,6 @@ namespace Omu.ValueInjecter.Injections
             return source == target;
         }
 
-        protected virtual void SetValue(object source, object target, PropertyInfo sp, PropertyInfo tp)
-        {
-            var val = sp.GetValue(source, null);
-            tp.SetValue(target, val, null);
-        }
-
         protected override void Execute(PropertyInfo sp, object source, object target)
         {
             if (sp.CanRead && sp.GetGetMethod() != null && (ignoredProps == null || !ignoredProps.Contains(sp.Name)))

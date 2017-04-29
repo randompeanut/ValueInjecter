@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6848BDA4-DF0F-4724-9234-CA7D05C92BFB}</ProjectGuid>
+    <ProjectGuid>{BB48DA57-4E91-4112-8AA0-B729C03E9141}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tests</RootNamespace>
-    <AssemblyName>Tests</AssemblyName>
+    <RootNamespace>Tests.Delta</RootNamespace>
+    <AssemblyName>Tests.Delta</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -70,40 +70,22 @@
   <ItemGroup>
     <Compile Include="Injections\CloneInjection.cs" />
     <Compile Include="Cloning.cs" />
-    <Compile Include="Injections\DateTimeToStr.cs" />
-    <Compile Include="Injections\DateToStrInjection.cs" />
     <Compile Include="Injections\EnumToInt.cs" />
     <Compile Include="Injections\IntToEnum.cs" />
     <Compile Include="Injections\NormalToNullables.cs" />
     <Compile Include="Injections\NullablesToNormal.cs" />
-    <Compile Include="Injections\SmartConventionInjection.cs" />
     <Compile Include="LoopInjectionTests.cs" />
     <Compile Include="Misc\DanRyanIDataReaderTests.cs" />
     <Compile Include="EnumInjectionsTests.cs" />
-    <Compile Include="UtilsTests.cs" />
     <Compile Include="FlatLoopInjectionTests.cs" />
     <Compile Include="FlatteningTest.cs" />
     <Compile Include="Misc\KohanTests.cs" />
-    <Compile Include="MapperTests.cs" />
     <Compile Include="Misc\QrowTest.cs" />
     <Compile Include="KnownSourceValueInjectionTest.cs" />
-    <Compile Include="KnownTargetValueInjectionTest.cs" />
     <Compile Include="NullableInjectionsTests.cs" />
     <Compile Include="PrivateSetterTests.cs" />
-    <Compile Include="SampleTypes\CountryDto.cs" />
-    <Compile Include="SampleTypes\Customer.cs" />
-    <Compile Include="SampleTypes\CustomerInput.cs" />
-    <Compile Include="SampleTypes\CustomerProxy.cs" />
-    <Compile Include="SampleTypes\FooForClone.cs" />
-    <Compile Include="SampleTypes\PrivateSetter\PrivategetsetBase.cs" />
-    <Compile Include="SampleTypes\PrivateSetter\Publicgetset.cs" />
-    <Compile Include="SampleTypes\Tag1.cs" />
-    <Compile Include="SampleTypes\PrivateSetter\Privategetset.cs" />
     <Compile Include="UnflatLoopInjectionTests.cs" />
     <Compile Include="Utils\AreEqual.cs" />
-    <Compile Include="Utils\TestingTools.cs" />
-    <Compile Include="TunnelierTests.cs" />
-    <Compile Include="UberFlatterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -127,12 +109,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Tests\Tests.csproj">
+      <Project>{6848BDA4-DF0F-4724-9234-CA7D05C92BFB}</Project>
+      <Name>Tests</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ValueInjecter.Delta\ValueInjecter.Delta.csproj">
       <Project>{3B98C847-6E9A-42BD-861B-53983EFB2A5F}</Project>
       <Name>ValueInjecter.Delta</Name>
     </ProjectReference>
     <ProjectReference Include="..\ValueInjecter\ValueInjecter.csproj">
-      <Project>{3c3ed7e4-062d-4c4f-a0e1-8f1a1efce1b6}</Project>
+      <Project>{3C3ED7E4-062D-4C4F-A0E1-8F1A1EFCE1B6}</Project>
       <Name>ValueInjecter</Name>
     </ProjectReference>
   </ItemGroup>
